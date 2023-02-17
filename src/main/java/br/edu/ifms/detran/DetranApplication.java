@@ -11,3 +11,6 @@ public class DetranApplication {
 	}
 
 }
+
+//pacote raiz: grupo juntado com o artefato
+// as camadas serão executadas apartir da classe raiz
