@@ -23,6 +23,7 @@ public class Carro implements Serializable {
 	private String marca;
 	private Integer modelo;
 	private int placa;
+	private String cor;
 	@OneToOne(cascade = CascadeType.ALL, mappedBy=  "carro")
 	private Apolice apolice;
 	
@@ -35,14 +36,87 @@ public class Carro implements Serializable {
 
 	
 
-	public Carro(Long id, String nome, String marca, Integer modelo, int placa, Apolice apolice) {
+	public Carro(Long id, String nome, String marca, Integer modelo, int placa, String cor, Apolice apolice) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.marca = marca;
 		this.modelo = modelo;
 		this.placa = placa;
+		this.cor = cor;
 		this.apolice = apolice;
+	}
+
+
+
+public Long getId() {
+		return id;
+	}
+
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+	public String getMarca() {
+		return marca;
+	}
+
+
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+
+
+	public Integer getModelo() {
+		return modelo;
+	}
+
+
+
+	public void setModelo(Integer modelo) {
+		this.modelo = modelo;
+	}
+
+
+
+	public int getPlaca() {
+		return placa;
+	}
+
+
+
+	public void setPlaca(int placa) {
+		this.placa = placa;
+	}
+
+
+
+	public String getCor() {
+		return cor;
+	}
+
+
+
+	public void setCor(String cor) {
+		this.cor = cor;
 	}
 
 
@@ -59,57 +133,11 @@ public class Carro implements Serializable {
 
 
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getMarca() {
-		return marca;
-	}
-
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
-
-	public Integer getModelo() {
-		return modelo;
-	}
-
-	public void setModelo(Integer modelo) {
-		this.modelo = modelo;
-	}
-
-	public int getPlaca() {
-		return placa;
-	}
-
-	public void setPlaca(int placa) {
-		this.placa = placa;
-	}
-
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-public List<Multa> getMultas() {
-		return multas;
-	}
 
-	public void setMultas(List<Multa> multas) {
-		this.multas = multas;
-	}
+
 
 @Override
 public int hashCode() {
