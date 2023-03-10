@@ -11,13 +11,10 @@ public class CarroDto {
 	private Integer modelo;
 	private String cor;
 	
-	
-	
 	public CarroDto() {
 	//construtor vazio
 		
 	}
-
 
 	public CarroDto(Carro carro) {
 		super();
