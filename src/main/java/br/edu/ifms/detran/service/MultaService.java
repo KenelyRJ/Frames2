@@ -6,8 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import br.edu.ifms.detran.dto.MultaDto;
-import br.edu.ifms.detran.model.Carro;
-import br.edu.ifms.detran.model.Infracao;
 import br.edu.ifms.detran.model.Multa;
 import br.edu.ifms.detran.repository.RepositoryMulta;
 

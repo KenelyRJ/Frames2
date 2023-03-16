@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.ifms.detran.dto.CarroDto;
-import br.edu.ifms.detran.model.Apolice;
 import br.edu.ifms.detran.model.Carro;
 import br.edu.ifms.detran.repository.RepositoryCarro;
 
@@ -49,8 +48,8 @@ public class CarroService  {
 				return new Carro(carroDto.getId(), carroDto.getNome(), carroDto.getMarca(), carroDto.getModelo(), carroDto.getPlaca(),carroDto.getCor(), null);
 				
 			}
-			public List<Carro> buscarPlaca(String str){
-				return repositoryCarro.findPlacaContaing(str);
-			}
+			//public List<Carro> buscarPlaca(String str){
+			//	return repositoryCarro.findPlacaContaing(str);
+			//}
 		
 }

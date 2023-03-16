@@ -8,7 +8,7 @@ import br.edu.ifms.detran.model.Carro;
 @Repository
 public interface RepositoryCarro extends JpaRepository<Carro, Long>{
 
-	List<Carro> findPlacaContaing(String str);
+	//List<Carro> findPlacaContaing(String str);
 
 	
 	

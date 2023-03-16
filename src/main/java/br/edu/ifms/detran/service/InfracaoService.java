@@ -4,10 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import br.edu.ifms.detran.dto.InfracaoDto;
-import br.edu.ifms.detran.dto.InfracaoDto;
-import br.edu.ifms.detran.model.Carro;
 import br.edu.ifms.detran.model.Infracao;
-import br.edu.ifms.detran.repository.RepositoryCarro;
 import br.edu.ifms.detran.repository.RepositoryInfracao;
 
 public class InfracaoService {
