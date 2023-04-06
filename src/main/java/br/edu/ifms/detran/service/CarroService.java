@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.ifms.detran.dto.CarroDto;
+import br.edu.ifms.detran.exception.ObjectNotFoundException;
 import br.edu.ifms.detran.model.Carro;
 import br.edu.ifms.detran.repository.RepositoryCarro;
 
@@ -20,15 +21,16 @@ public class CarroService  {
 		public List<Carro> buscarTodos(){
 		return repositoryCarro.findAll();
 	}
-		public Carro buscarId(Long id) {
+		public Carro buscarId(Integer id) {
 			Optional <Carro> carro = repositoryCarro.findById(id);
-			return carro.orElseThrow();
+			return carro.orElseThrow(() -> new ObjectNotFoundException(
+					"Objeto não encontrada:" +id+",Tipo:"+Carro.class.getName()));
 		}
 		public Carro inserir(Carro carro) {
 			carro.setId(null);
 			return repositoryCarro.save(carro);
 		}
-		public void remover(Long id) {
+		public void remover(Integer id) {
 			buscarId(id);
 			repositoryCarro.deleteById(id);
 		}
@@ -51,5 +53,9 @@ public class CarroService  {
 			//public List<Carro> buscarPlaca(String str){
 			//	return repositoryCarro.findPlacaContaing(str);
 			//}
+			public Carro buscarPorId(Integer id) {
+				// TODO Auto-generated method stub
+				return null;
+			}
 		
 }

@@ -16,7 +16,7 @@ public class Apolice implements Serializable  {
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id	
-	private Long id;
+	private Integer id;
 	private float valor;
 	private  String cobertura; 
 	private  String vigencia;
@@ -31,7 +31,7 @@ public class Apolice implements Serializable  {
 	}
 
 
-	public Apolice(Long id, float valor, String cobertura, String vigencia, Carro carro) {
+	public Apolice(Integer id, float valor, String cobertura, String vigencia, Carro carro) {
 		super();
 		this.id = id;
 		this.valor = valor;
@@ -42,12 +42,12 @@ public class Apolice implements Serializable  {
 	}
 
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
